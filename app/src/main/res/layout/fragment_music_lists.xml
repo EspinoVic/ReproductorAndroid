@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.MusicLists"
+
+    >
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_topTabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.005" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_listas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tab_layout_background"
+        android:foregroundGravity="center"
+        app:tabIndicatorGravity="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_topTabLayout"
+        app:layout_constraintBottom_toTopOf="@id/gl_topViewPager"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:tabBackground="@drawable/tab_layout_selector"
+        app:tabIndicatorHeight="0dp"
+
+        app:tabMode="scrollable"
+
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/lyrics_primary"
+        app:tabTextAppearance="@style/TabTextAppearance"
+
+        app:tabTextColor="#8D8D8D">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reproduciendo" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Folders" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stared" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_topViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintGuide_percent="0.065"
+         />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2_musicLists"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_topViewPager">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toTopOf="@+id/container_mini_player"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/container_mini_player"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_bottomMarg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        tools:context=".fragments.MiniPlayer">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_startImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".025" />
+
+        <ImageView
+            android:id="@+id/img_song"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_baseline_album_24"
+            android:transitionName="transition_imgCurrentSong"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="@id/gl_topText"
+            app:layout_constraintBottom_toBottomOf="@id/gl_bottomImg"
+            app:layout_constraintRight_toRightOf="@id/gl_endImage"
+            app:layout_constraintLeft_toLeftOf="@id/gl_startImage"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_endImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".21" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_startName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".25" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <TextView
+            android:id="@+id/txt_songName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="start"
+            android:singleLine="true"
+            android:transitionName="transition_songName"
+            android:text="@string/name_song"
+            android:textColor="@color/lyrics_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/gl_startName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/gl_topText" />
+
+        <TextView
+            android:id="@+id/txt_authorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:text="@string/author_name"
+            android:textColor="@color/lyric_secondary"
+            android:textSize="15sp"
+            android:transitionName="transition_authorName"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="@id/gl_startName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_songName"
+            app:layout_constraintBottom_toTopOf="@id/gl_bottomImg"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_bottomImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".9" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/pause"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_pause_button"
+            android:transitionName="transition_btnPause"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_bottomMarg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

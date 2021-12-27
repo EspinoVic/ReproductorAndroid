@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/drawable/custom_progress.xml" value="0.38125" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/background_player.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/folder_item.xml" value="0.296195652173913" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_current_play_list.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_directorios.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_directorios2.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_mini_player.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_music_lists.xml" value="0.296195652173913" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_reproductor_screen.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_reproductor_screen2.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/fragment_song_list2.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/song_item_.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/song_item_lista.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Vic/AndroidStudioProjects/ReproductorAndroid/app/src/main/res/layout/song_item_lista_active.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
